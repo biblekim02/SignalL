@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SignalL.MainPage">
+
+    <StackLayout x:Name="sLot">
+
+        <Grid>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+                <ColumnDefinition  Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <ImageButton Source="file.png" x:Name="File"
+                         Clicked="File_Clicked"
+                         Grid.Column="0" Margin="7"
+                         WidthRequest="43" HeightRequest="35"  />
+
+            <ImageButton Source="trash.png" x:Name="trash"
+                         Clicked="trash_Clicked"
+                         Grid.Column="4" Margin="7" 
+                         WidthRequest="43" HeightRequest="35" />
+
+        </Grid>
+
+
+        <Frame x:Name="Frame1" BackgroundColor="WhiteSmoke" Padding="10" Margin="30,0,30,0"  HeightRequest="340" >
+
+            <VerticalStackLayout>
+
+                <Image Source="doctor.png" HeightRequest="40" VerticalOptions="Start"/>
+
+                <Label TextColor="Black" FontSize="25" x:Name="lbldoc"
+                       Margin="0" Padding="30" VerticalTextAlignment="Center"
+                       HorizontalOptions="Center" MinimumHeightRequest="240"
+                       FontAttributes="Bold" FontFamily="malg" CharacterSpacing="1" MaxLines="5" />
+
+                <ImageButton Source="record.png" x:Name="record"
+                             Clicked="record_Clicked"
+                             WidthRequest="30" HeightRequest="30" Margin="10"
+                             VerticalOptions="End" BackgroundColor="Transparent"/>
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+
+        <Frame Padding="10" BackgroundColor="WhiteSmoke" Margin="30,10,30,0" x:Name="Frame2"  HeightRequest="340">
+
+            <VerticalStackLayout>
+
+                <Image Source="patient.png" HeightRequest="40" VerticalOptions="Start" />
+
+                <Label TextColor="Black" FontSize="25" x:Name="lblpat"
+                       Margin="0" Padding="30" VerticalTextAlignment="Center"
+                       HorizontalOptions="Center" MinimumHeightRequest="240"
+                       FontAttributes="Bold" FontFamily="malg" CharacterSpacing="1" MaxLines="5"/>
+
+                <ImageButton Source="camera.png" x:Name="camera"
+                             Clicked="camera_Clicked" Grid.Column="2" 
+                             WidthRequest="30" HeightRequest="30" Margin="10" 
+                             VerticalOptions="End" BackgroundColor="Transparent"/>
+
+            </VerticalStackLayout>
+
+        </Frame>
+
+
+        <Label x:Name="lbln"/>
+
+
+        <Grid>
+
+            <ListView x:Name="lstview" Margin="20,20,20,20" 
+                  BackgroundColor="Pink" IsVisible="False"
+                  >
+            </ListView>
+
+        </Grid>
+
+
+        <Label x:Name="flbl"></Label>
+        <Label x:Name="flbl2"></Label>
+
+    </StackLayout>
+
+</ContentPage>
